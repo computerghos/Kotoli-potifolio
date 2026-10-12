@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kotoli Noah's personal portfolio — ICT, business computing, web development and IT support.">
+  <title>Kotoli Noah | Personal Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--surface:#121a2e;--surface2:#18233c;--text:#f4f7ff;--muted:#a8b3cc;--accent:#45e0c1;--accent2:#7c8cff;--border:rgba(255,255,255,.10)}
+    body.light{--bg:#f4f7fb;--surface:#fff;--surface2:#eaf0f8;--text:#182238;--muted:#596780;--accent:#087f8c;--accent2:#4e5bd5;--border:rgba(18,32,55,.12)}
+    *{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7;transition:background .25s,color .25s}
+    .navbar{background:rgba(11,16,32,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    body.light .navbar{background:rgba(244,247,251,.9)}
+    
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+    .navbar-brand,.nav-link{color:var(--text)!important}.navbar-brand span{color:var(--accent)}
+    .nav-link:hover{color:var(--accent)!important}
+    .hero{min-height:88vh;display:flex;align-items:center;padding:110px 0 70px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--accent2);filter:blur(130px);opacity:.19;right:-100px;top:40px}
+    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.7rem,7vw,5.2rem);font-weight:800;letter-spacing:-2px;line-height:1.04}
+    .gradient{background:linear-gradient(100deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead,.muted{color:var(--muted)}
+    .btn-accent{background:var(--accent);color:#07111d;border:0;font-weight:700;border-radius:999px;padding:12px 22px}
+    .btn-accent:hover{filter:brightness(1.08);color:#07111d;transform:translateY(-2px)}
+    .btn-outline-custom{border:1px solid var(--border);color:var(--text);border-radius:999px;padding:11px 21px}
+    .btn-outline-custom:hover{border-color:var(--accent);color:var(--accent)}
+    .hero-card{background:linear-gradient(145deg,var(--surface2),var(--surface));border:1px solid var(--border);border-radius:28px;padding:30px;box-shadow:0 24px 70px rgba(0,0,0,.18);position:relative}
+    .avatar{width:116px;height:116px;border-radius:28px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#07111d;font-size:2.6rem;font-weight:900;margin-bottom:24px}
+    .section{padding:85px 0}.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-1px}
+    .panel,.skill-card,.project-card,.timeline-card{height:100%;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:25px;transition:transform .2s,border-color .2s}
+    .panel:hover,.skill-card:hover,.project-card:hover{transform:translateY(-5px);border-color:var(--accent)}
+    .icon-box{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:rgba(69,224,193,.12);color:var(--accent);font-size:1.35rem;margin-bottom:18px}
+    .skill-line{height:7px;background:var(--surface2);border-radius:99px;overflow:hidden;margin-top:9px}.skill-line span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px}
+    .tag{display:inline-block;border:1px solid var(--border);color:var(--muted);border-radius:99px;padding:4px 10px;font-size:.78rem;margin:4px 3px 0 0}
+    .project-visual{height:145px;border-radius:14px;background:linear-gradient(135deg,rgba(69,224,193,.22),rgba(124,140,255,.28));display:flex;align-items:center;justify-content:center;font-size:3rem;color:var(--accent);margin-bottom:20px}
+    .timeline-dot{width:12px;height:12px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:10px}
+    .contact-link{color:var(--text);text-decoration:none;overflow-wrap:anywhere}.contact-link:hover{color:var(--accent)}
+    footer{border-top:1px solid var(--border);padding:25px 0;color:var(--muted)}
+    .form-control{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:12px}.form-control:focus{background:var(--surface);color:var(--text);border-color:var(--accent);box-shadow:0 0 0 .2rem rgba(69,224,193,.12)}
+    @media(max-width:767px){.hero{min-height:auto;padding-top:120px}.hero-card{margin-top:28px}.section{padding:65px 0}h1{letter-spacing:-1px}}
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home">K<span>N.</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation"><i class="bi bi-list fs-2" style="color:var(--text)"></i></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><button id="themeToggle" class="btn btn-outline-custom btn-sm mt-2 mt-lg-0" aria-label="Toggle light and dark mode"><i class="bi bi-sun"></i></button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container position-relative">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7">
+        <div class="eyebrow mb-3"><i class="bi bi-circle-fill me-2" style="font-size:.5rem"></i>Business Computing Graduate · ICT Professional</div>
+        <h1>Hello, I'm<br><span class="gradient">Kotoli Noah.</span></h1>
+        <p class="lead mt-4 mb-4">I connect technology with practical business solutions through Network engeering and troubleshooting, IT support, web development, data management and digital systems.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#projects" class="btn btn-accent">Explore my work <i class="bi bi-arrow-up-right ms-1"></i></a>
+          <a href="#contact" class="btn btn-outline-custom">Let's connect</a>
+        </div>
+        <div class="d-flex flex-wrap gap-4 mt-5 muted small">
+          <span><i class="bi bi-geo-alt me-2" style="color:var(--accent)"></i>Jinja Uganda</span>
+          <span><i class="bi bi-laptop me-2" style="color:var(--accent)"></i>ICT & Digital Solutions</span>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="hero-card">
+          <div class="avatar">KN</div>
+          <p class="eyebrow mb-2">Professional snapshot</p>
+          <h3 class="fw-bold mb-3">Technology. Service. Impact.</h3>
+          <p class="muted mb-4">A business computing professional focused on dependable systems, useful digital experiences and secure information management.</p>
+          <div class="row g-3">
+            <div class="col-6"><div class="p-3 rounded-4" style="background:var(--surface2)"><div class="gradient fw-bold fs-4">ICT</div><small class="muted">Support & systems</small></div></div>
+            <div class="col-6"><div class="p-3 rounded-4" style="background:var(--surface2)"><div class="gradient fw-bold fs-4">Web</div><small class="muted">Design & development</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5"><p class="eyebrow">About me</p><h2 class="section-title">Practical thinking.<br><span class="gradient">Useful technology.</span></h2></div>
+      <div class="col-lg-7"><p class="lead">I am Kotoli Noah, a Bachelor of Business Computing graduate from Makerere University Business School (MUBS), with experience spanning ICT operations and site management.</p><p class="muted">My interests include Troubleshooting networks, server configurations, developing web based management systems and responsive websites, supporting users and computer systems, managing databases, improving digital workflows and helping organisations use technology securely and effectively. I value reliability, clear communication, continuous learning and solutions that meet real user needs.</p>
+        <div class="d-flex flex-wrap gap-2 mt-4"><span class="tag">Problem solving</span><span class="tag">Customer service</span><span class="tag">Team leadership</span><span class="tag">Data protection</span><span class="tag">Business operations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills" style="background:var(--surface);">
+  <div class="container">
+    <div class="mb-5"><p class="eyebrow">What I do</p><h2 class="section-title">Skills & capabilities</h2><p class="muted">A blend of technical knowledge, service delivery and business operations.</p></div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="skill-card"><div class="icon-box"><i class="bi bi-hdd-network"></i></div><h5 class="fw-bold">IT Support & Networking</h5><p class="muted mb-0">Troubleshooting computers, software, connectivity, routers, switches and user access issues.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="skill-card"><div class="icon-box"><i class="bi bi-code-slash"></i></div><h5 class="fw-bold">Web Development</h5><p class="muted mb-0">Building responsive web based systems with HTML, CSS,python,JavaScript and Bootstrap, with attention to usability.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="skill-card"><div class="icon-box"><i class="bi bi-database-lock"></i></div><h5 class="fw-bold">Data & Information Security</h5><p class="muted mb-0">Database handling, access controls, backups, confidentiality and good information-management practices.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="skill-card"><div class="icon-box"><i class="bi bi-windows"></i></div><h5 class="fw-bold">Systems Administration</h5><p class="muted mb-0">Operating-system maintenance, software setup, user accounts, backup and recovery, and help-desk support.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="skill-card"><div class="icon-box"><i class="bi bi-file-earmark-spreadsheet"></i></div><h5 class="fw-bold">Office & Reporting</h5><p class="muted mb-0">Microsoft Word, Excel, PowerPoint, Access, documentation, reporting and digital record keeping.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="skill-card"><div class="icon-box"><i class="bi bi-people"></i></div><h5 class="fw-bold">Operations & Leadership</h5><p class="muted mb-0">Team coordination, customer care, service delivery, planning and day-to-day operational support.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <div class="mb-5"><p class="eyebrow">Selected work</p><h2 class="section-title">Projects & focus areas</h2><p class="muted">Project summaries below describe areas of work and development. Add live links, screenshots and verified outcomes as they become available.</p></div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><article class="project-card"><div class="project-visual"><i class="bi bi-grid-1x2"></i></div><h5 class="fw-bold">ESUGA Management System</h5><p class="muted">A proposed digital platform for managing client records, role-based access, approvals and downloadable reports for an elderly-support organisation.</p><span class="tag">PHP / MySQL</span><span class="tag">Data management</span></article></div>
+      <div class="col-md-6 col-lg-4"><article class="project-card"><div class="project-visual"><i class="bi bi-globe2"></i></div><h5 class="fw-bold">NGO Website Development</h5><p class="muted">Responsive website concepts for presenting an organisation's mission, programmes, team, partnerships, donations and contact information.</p><span class="tag">HTML / CSS</span><span class="tag">Bootstrap</span><span class="tag">UI/UX</span></article></div>
+      <div class="col-md-6 col-lg-4"><article class="project-card"><div class="project-visual"><i class="bi bi-router"></i></div><h5 class="fw-bold">Network Setup & Troubleshooting</h5><p class="muted">Practical networking focus including router and switch configuration, connectivity troubleshooting and structured network planning.</p><span class="tag">Networking</span><span class="tag">IT support</span></article></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience" style="background:var(--surface);">
+  <div class="container">
+    <div class="mb-5"><p class="eyebrow">My journey</p><h2 class="section-title">Experience & education</h2></div>
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="timeline-card mb-3"><p class="eyebrow mb-2"><span class="timeline-dot"></span>2025 – Present</p><h5 class="fw-bold">Head of ICT Department</h5><p class="muted mb-2">Elderly Support Uganda (ESUGA)</p><p class="mb-0">Support ICT infrastructure and information systems, manage digital platforms and user access, coordinate backups, provide technical support and promote secure handling of organisational information.</p></div>
+        <div class="timeline-card"><p class="eyebrow mb-2"><span class="timeline-dot"></span>2023 – 2025</p><h5 class="fw-bold">Site Manager</h5><p class="muted mb-2">River Front Beach, Kayunga</p><p class="mb-0">Supported day-to-day site operations, staff coordination, customer service, service quality and operational reporting.</p></div>
+      </div>
+      <div class="col-lg-5"><div class="timeline-card h-100"><div class="icon-box"><i class="bi bi-mortarboard"></i></div><p class="eyebrow">Education</p><h5 class="fw-bold">Bachelor of Business Computing</h5><p class="muted">Makerere University Business School (MUBS)</p><hr style="border-color:var(--border)"><h6 class="fw-bold">Uganda Advanced Certificate of Education (UACE)</h6><p class="muted">St Pontiano Ngondwe S.S, Kangulumira</p><h6 class="fw-bold">Uganda Certificate of Education (UCE)</h6><p class="muted mb-0">St Pontiano Ngondwe S.S, Kangulumira</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5"><p class="eyebrow">Get in touch</p><h2 class="section-title">Have a project or opportunity?</h2><p class="muted mt-3">I welcome opportunities in Computer networking, system administration and server configuration, ICT support, web development, data management, digital systems and business operations.</p>
+        <div class="mt-4 d-grid gap-3">
+          <div><i class="bi bi-envelope me-3" style="color:var(--accent)"></i><a class="contact-link" href="mailto:kotolinoah@gmail.com">kotolinoah8@gmail.com</a></div>
+          <div><i class="bi bi-telephone me-3" style="color:var(--accent)"></i><a class="contact-link" href="tel:+256745715382 &amp 0781957976">+256 745 715 382 0781957976</a></div>
+          <div><i class="bi bi-geo-alt me-3" style="color:var(--accent)"></i><span class="muted">Uganda</span></div>
+        </div>
+      </div>
+      <div class="col-lg-7"><div class="panel">
+        <h5 class="fw-bold mb-3">Send an enquiry</h5>
+        <form id="contactForm">
+          <div class="row g-3"><div class="col-md-6"><label for="name" class="form-label">Your name</label><input id="name" class="form-control" required placeholder="Enter your name"></div>
+          <div class="col-md-6"><label for="email" class="form-label">Your email</label><input id="email" type="email" class="form-control" required placeholder="name@example.com"></div>
+          <div class="col-12"><label for="subject" class="form-label">Subject</label><input id="subject" class="form-control" required placeholder="What would you like to discuss?"></div>
+          <div class="col-12"><label for="message" class="form-label">Message</label><textarea id="message" rows="4" class="form-control" required placeholder="Write your message..."></textarea></div>
+          <div class="col-12"><button class="btn btn-accent" type="submit">send email message <i class="bi bi-send ms-1"></i></button></div></div>
+        </form>
+      </div></div>
+    </div>
+  </div>
+</section>
+<footer><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>© <span id="year"></span> Kotoli Noah. All rights reserved.</span></div></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('themeToggle').addEventListener('click', function(){
+    document.body.classList.toggle('light');
+    this.innerHTML = document.body.classList.contains('light') ? '<i class="bi bi-moon"></i>' : '<i class="bi bi-sun"></i>';
+  });
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const body = `Hello Kotoli,\n\n${message}\n\nFrom: ${name}\nReply email: ${email}`;
+    window.location.href = `mailto:kotolinoah@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+</script>
+</body>
+</html>
